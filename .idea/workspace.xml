@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1a1d29-ece0-4b14-9638-ff73a1802dca" name="Changes" comment="add file parallel">
-      <change afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+    <list default="true" id="7b1a1d29-ece0-4b14-9638-ff73a1802dca" name="Changes" comment="add file server adn klient">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/klient.py" beforeDir="false" afterPath="$PROJECT_DIR$/klient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,20 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in bmi_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Main2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bmi.executor&quot;: &quot;Run&quot;,
-    &quot;Python.bmi_test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sample_th_m.executor&quot;: &quot;Run&quot;,
-    &quot;Python.sample_th_s.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in bmi_test.py.executor": "Run",
+    "Python.Main.executor": "Run",
+    "Python.Main2.executor": "Run",
+    "Python.bmi.executor": "Run",
+    "Python.bmi_test.executor": "Run",
+    "Python.klient.executor": "Run",
+    "Python.sample_th_m.executor": "Run",
+    "Python.sample_th_s.executor": "Run",
+    "Python.server.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -82,7 +85,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717096901433</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add file server adn klient">
+      <option name="closed" value="true" />
+      <created>1717332847231</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717332847231</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +109,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add file parallel" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file parallel" />
+    <MESSAGE value="add file server adn klient" />
+    <option name="LAST_COMMIT_MESSAGE" value="add file server adn klient" />
   </component>
 </project>
