@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1a1d29-ece0-4b14-9638-ff73a1802dca" name="Changes" comment="add file server adn klient">
+    <list default="true" id="7b1a1d29-ece0-4b14-9638-ff73a1802dca" name="Changes" comment="add file server and klient, save file">
+      <change afterPath="$PROJECT_DIR$/example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/klient_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/klient.py" beforeDir="false" afterPath="$PROJECT_DIR$/klient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
@@ -52,7 +55,10 @@
     "Python.Main2.executor": "Run",
     "Python.bmi.executor": "Run",
     "Python.bmi_test.executor": "Run",
+    "Python.example.executor": "Run",
+    "Python.example_2.executor": "Run",
     "Python.klient.executor": "Run",
+    "Python.klient_2.executor": "Run",
     "Python.sample_th_m.executor": "Run",
     "Python.sample_th_s.executor": "Run",
     "Python.server.executor": "Run",
@@ -93,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717332847231</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add file server and klient...">
+      <option name="closed" value="true" />
+      <created>1717343203301</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717343203301</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add file server and klient, save file">
+      <option name="closed" value="true" />
+      <created>1717343247466</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717343247466</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +132,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add file parallel" />
     <MESSAGE value="add file server adn klient" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file server adn klient" />
+    <MESSAGE value="add file server and klient..." />
+    <MESSAGE value="add file server and klient, save file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add file server and klient, save file" />
   </component>
 </project>

@@ -1,60 +1,41 @@
 import socket
 import threading
+import os
 
-# Ukládání připojených klientů
-clients = {}
-
-
-def broadcast(message, sender_socket):
-    for client_socket in clients:
-        if client_socket != sender_socket:
-            client_socket.send(message)
-
-
-def handle_client(client_socket):
+def handle_client(client_socket, addr):
+    print(f'Připojen nový klient: {addr}')
     while True:
-        try:
-            message = client_socket.recv(1024)
-            if message:
-                broadcast(message, client_socket)
+        command = client_socket.recv(1024).decode()
+        if command == 'SEND_FILE':
+            file_name = client_socket.recv(1024).decode()
+            file_size = int(client_socket.recv(1024).decode())
+            client_socket.send('CONFIRM'.encode())
+            confirmation = client_socket.recv(1024).decode()
+            if confirmation == 'YES':
+                with open(f'received_{file_name}', 'wb') as f:
+                    bytes_received = 0
+                    while bytes_received < file_size:
+                        data = client_socket.recv(1024)
+                        f.write(data)
+                        bytes_received += len(data)
+                client_socket.send('TRANSFER_COMPLETE'.encode())
             else:
-                remove_client(client_socket)
-                break
-        except:
-            remove_client(client_socket)
+                client_socket.send('TRANSFER_ABORTED'.encode())
+        elif command == 'EXIT':
             break
 
-
-def remove_client(client_socket):
-    if client_socket in clients:
-        client_socket.close()
-        del clients[client_socket]
-
+    client_socket.close()
 
 def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server.bind(('0.0.0.0', 5555))
-    server.listen(10)
+    server.listen(5)
     print('Server naslouchá na portu 5555')
 
     while True:
-        client_socket, client_address = server.accept()
-        print(f'Připojen nový klient: {client_address}')
-
-        client_socket.send('USERNAME'.encode())
-        username = client_socket.recv(1024).decode()
-        client_socket.send('PASSWORD'.encode())
-        password = client_socket.recv(1024).decode()
-
-        if username and password:
-            clients[client_socket] = username
-            print(f'{username} se připojil do chatovací místnosti.')
-            broadcast(f'{username} se připojil do chatovací místnosti.'.encode(), client_socket)
-            client_socket.send('Připojen k serveru.'.encode())
-            threading.Thread(target=handle_client, args=(client_socket,)).start()
-        else:
-            client_socket.close()
-
+        client_socket, addr = server.accept()
+        client_handler = threading.Thread(target=handle_client, args=(client_socket, addr))
+        client_handler.start()
 
 if __name__ == '__main__':
     main()
