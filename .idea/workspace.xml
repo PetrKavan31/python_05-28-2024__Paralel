@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b1a1d29-ece0-4b14-9638-ff73a1802dca" name="Changes" comment="add file server and klient, save file">
-      <change afterPath="$PROJECT_DIR$/example.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/example_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/klient_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/klient.py" beforeDir="false" afterPath="$PROJECT_DIR$/klient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-    </list>
+    <list default="true" id="7b1a1d29-ece0-4b14-9638-ff73a1802dca" name="Changes" comment="examples" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717343247466</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="examples">
+      <option name="closed" value="true" />
+      <created>1717362686406</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717362686406</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +135,7 @@
     <MESSAGE value="add file server adn klient" />
     <MESSAGE value="add file server and klient..." />
     <MESSAGE value="add file server and klient, save file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add file server and klient, save file" />
+    <MESSAGE value="examples" />
+    <option name="LAST_COMMIT_MESSAGE" value="examples" />
   </component>
 </project>
