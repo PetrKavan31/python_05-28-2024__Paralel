@@ -30,7 +30,12 @@ class RandomNumbers:
         print(f"Average of numbers: {average}")
 
 
+def main():
+    result = RandomNumbers()
+    result.fill_list()
+    result.sum_list()
+    result.average_list()
 
 
 if __name__ == "__main__":
-    pass
+    main()
