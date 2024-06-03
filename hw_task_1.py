@@ -15,26 +15,44 @@ import random
 class RandomNumbers:
     def __init__(self):
         self.random_list = []
+        self.list_filled_event = threading.Event()
+        self.total_sum = None
+        self.average = None
 
     def fill_list(self):
-        for _ in range(10):
-            self.random_list.append(random.randint(1,100))
+        for _ in range(25):
+            self.random_list.append(random.randint(1,1000))
         print(f"List filled with numbers: {self.random_list}")
+        self.list_filled_event.set()
 
     def sum_list(self):
-        total_sum = sum(self.random_list)
-        print(f"Sum of numbers: {total_sum}")
+        self.list_filled_event.wait()
+        self.total_sum = sum(self.random_list)
+        print(f"Sum of numbers: {self.total_sum}")
 
     def average_list(self):
-        average = sum(self.random_list) / len(self.random_list)
-        print(f"Average of numbers: {average}")
+        self.list_filled_event.wait()
+        self.average = sum(self.random_list) / len(self.random_list)
+        print(f"Average of numbers: {self.average}")
 
 
 def main():
     result = RandomNumbers()
-    result.fill_list()
-    result.sum_list()
-    result.average_list()
+
+    fill_thread = threading.Thread(target=result.fill_list())
+    sum_thread = threading.Thread(target=result.sum_list())
+    average_thread = threading.Thread(target=result.average_list())
+
+    fill_thread.start()
+    sum_thread.start()
+    average_thread.start()
+
+    fill_thread.join()
+    sum_thread.join()
+    average_thread.join()
+    #result.fill_list()
+    #result.sum_list()
+    #result.average_list()
 
 
 if __name__ == "__main__":
