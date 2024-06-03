@@ -50,9 +50,6 @@ def main():
     fill_thread.join()
     sum_thread.join()
     average_thread.join()
-    #result.fill_list()
-    #result.sum_list()
-    #result.average_list()
 
 
 if __name__ == "__main__":
